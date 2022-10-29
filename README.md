@@ -1,2 +1,6 @@
-# zuriWeek4-python-task
-Pip, Virtual environments and intro to Django
+# Songcrud
+
+## A basic Django project called musicapp 
+
+
+### please note this README.md file will be updated
