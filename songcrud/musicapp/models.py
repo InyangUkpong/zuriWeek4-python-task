@@ -2,7 +2,7 @@ from datetime import date, datetime
 
 from django.db import models
 
-# Create your models in here.
+# Create your models right here.
 
 
 class Artiste(models.Model):
