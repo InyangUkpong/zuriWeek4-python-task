@@ -3,8 +3,10 @@ from datetime import date, datetime
 from django.db import models
 
 # Create your models here.
+
+
 class Artiste(models.Model):
-    first_name = models.CharField(max_length= 40)
+    first_name = models.CharField(max_length=40)
     last_name = models.CharField(max_length=40)
     age = models.IntegerField(default=0)
 
@@ -13,10 +15,10 @@ class Artiste(models.Model):
 
 
 class Song(models.Model):
-    title = models.CharField(max_length= 40)
+    title = models.CharField(max_length=40)
     date_released = models.DateTimeField(auto_now_add=False)
     likes = models.IntegerField(default=0)
-    artist_id = models.ForeignKey(Artiste, on_delete = models.CASCADE)
+    artist_id = models.ForeignKey(Artiste, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
@@ -24,7 +26,7 @@ class Song(models.Model):
 
 class Lyric(models.Model):
     content = models.TextField()
-    song_id = models.ForeignKey(Song, on_delete = models.CASCADE)
+    song_id = models.ForeignKey(Song, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.content
